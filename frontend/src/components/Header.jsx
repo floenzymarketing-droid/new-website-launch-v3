@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ShoppingBag } from "lucide-react";
-import { NAV } from "../mock/mock";
+import { NAV, FLOENZY_LOGO } from "../mock/mock";
 import { useCart } from "../context/CartContext";
 
 const Header = () => {
@@ -31,12 +31,12 @@ const Header = () => {
         }`}
       >
         <div className="container-lux flex items-center justify-between h-[76px]">
-          <Link
-            to="/"
-            className="font-serif-display text-2xl tracking-[0.18em] uppercase"
-            style={{ fontWeight: 500 }}
-          >
-            Floenzy
+          <Link to="/" className="flex items-center">
+            <img
+              src={FLOENZY_LOGO}
+              alt="Floenzy"
+              className="h-7 md:h-8 w-auto"
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-10">

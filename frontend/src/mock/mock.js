@@ -3,6 +3,9 @@
 // replaced with real API data during backend integration.
 
 // Real Floenzy brand photography (user-provided assets).
+export const FLOENZY_LOGO =
+  "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/8q2i4cq1_Floenzy_Logo1.webp";
+
 export const FLOENZY_VIDEO =
   "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/1gta5e7s_Floenzy%20Filtered%20Shower%20Head%20%E2%80%93%203-Stage%20Filtration%20%26%20Vitamin%20C.mp4";
 
@@ -13,6 +16,10 @@ export const FLOENZY_PHOTOS = {
     "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/j7ocr648_FLOENZY%20PHOTO%2016.webp",
   install:
     "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/kb2obog7_FLOENZY%20PHOTO%2001.webp",
+  hand:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/yt342wge_61ni3DeNvYL._AC_SL1448_%20%281%29.jpg",
+  box:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/doyq5ep6_61dg53K7jZL._AC_SL1448_.jpg",
 };
 
 export const IMAGES = {
@@ -66,12 +73,12 @@ export const PRODUCT = {
   rating: 4.3,
   reviewCount: 12,
   images: [
-    "https://m.media-amazon.com/images/I/41+eUCNwpTL._AC_SY879_.jpg",
+    FLOENZY_PHOTOS.hand,
+    FLOENZY_PHOTOS.box,
     FLOENZY_PHOTOS.marble,
-    "https://m.media-amazon.com/images/I/61RIQ5VzabL._SY500_.jpg",
-    "https://m.media-amazon.com/images/I/61f6rlTZV6L._SY500_.jpg",
+    "https://m.media-amazon.com/images/I/41+eUCNwpTL._AC_SY879_.jpg",
     FLOENZY_PHOTOS.install,
-    "https://m.media-amazon.com/images/I/71y+D2zJxAL._SY500_.jpg",
+    "https://m.media-amazon.com/images/I/61RIQ5VzabL._SY500_.jpg",
   ],
   assurances: [
     "Complimentary UK delivery",
