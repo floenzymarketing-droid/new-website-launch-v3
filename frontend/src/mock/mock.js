@@ -3,6 +3,9 @@
 // replaced with real API data during backend integration.
 
 // Real Floenzy brand photography (user-provided assets).
+export const FLOENZY_VIDEO =
+  "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/1gta5e7s_Floenzy%20Filtered%20Shower%20Head%20%E2%80%93%203-Stage%20Filtration%20%26%20Vitamin%20C.mp4";
+
 export const FLOENZY_PHOTOS = {
   marble:
     "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/mgybwcdo_sdfsdfsd.jpeg",
