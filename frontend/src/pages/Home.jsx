@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Reveal from "../components/Reveal";
-import { IMAGES, PRODUCT, STAGES, BENEFITS, STATS, FLOENZY_PHOTOS, FLOENZY_VIDEO } from "../mock/mock";
+import { IMAGES, PRODUCT, STAGES, BENEFITS, STATS, FLOENZY_PHOTOS } from "../mock/mock";
 
 const Home = () => {
   return (
@@ -160,32 +160,6 @@ const Home = () => {
               <Link to="/filtration" className="btn-line">
                 See the full process <ArrowRight size={14} />
               </Link>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ---------------- VIDEO SHOWCASE ---------------- */}
-      <section className="pb-28 md:pb-40">
-        <div className="container-lux">
-          <Reveal>
-            <p className="kicker text-center">see it in motion</p>
-          </Reveal>
-          <Reveal delay={100}>
-            <h2 className="display text-center text-6xl md:text-8xl mt-6 mb-14">
-              Floenzy, <em>in flow.</em>
-            </h2>
-          </Reveal>
-          <Reveal delay={150}>
-            <div className="img-zoom aspect-video bg-[var(--ink)] border border-[var(--line)] overflow-hidden">
-              <video
-                src={FLOENZY_VIDEO}
-                poster={FLOENZY_PHOTOS.marble}
-                controls
-                playsInline
-                preload="metadata"
-                className="w-full h-full object-cover"
-              />
             </div>
           </Reveal>
         </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Star, Plus, Minus, Check, ArrowRight, RefreshCw, ShoppingBag } from "lucide-react";
 import Reveal from "../components/Reveal";
-import { PRODUCT, FAQS, AMAZON_URL } from "../mock/mock";
+import { PRODUCT, FAQS, AMAZON_URL, FLOENZY_VIDEO, FLOENZY_PHOTOS } from "../mock/mock";
 import { getCatalog, getReviews, createReview } from "../lib/api";
 import { useCart } from "../context/CartContext";
 
@@ -289,6 +289,30 @@ const Shop = () => {
             <p className="lede text-3xl md:text-4xl mt-6 leading-[1.3]">
               {PRODUCT.description}
             </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ---------- video ---------- */}
+      <section className="py-24 border-t border-[var(--line)]">
+        <div className="container-lux">
+          <Reveal>
+            <p className="kicker text-center">see it in motion</p>
+            <h2 className="display text-center text-5xl md:text-7xl mt-6 mb-12">
+              Floenzy, <em>in flow.</em>
+            </h2>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="aspect-video bg-[var(--ink)] border border-[var(--line)] overflow-hidden max-w-[1000px] mx-auto">
+              <video
+                src={FLOENZY_VIDEO}
+                poster={FLOENZY_PHOTOS.marble}
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </Reveal>
         </div>
       </section>
