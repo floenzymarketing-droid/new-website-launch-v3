@@ -151,6 +151,16 @@ const Shop = () => {
                 </div>
               ))}
             </div>
+
+            <div className="mt-8 pt-6 border-t border-[var(--line)] grid grid-cols-3 gap-3">
+              {PRODUCT.assurances.map((a, i) => (
+                <div key={i} className="text-center">
+                  <span className="font-sans-ui uppercase tracking-[0.14em] text-[0.62rem] text-[var(--muted)] leading-tight block">
+                    {a}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

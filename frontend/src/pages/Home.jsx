@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Reveal from "../components/Reveal";
-import { IMAGES, PRODUCT, STAGES, BENEFITS, STATS } from "../mock/mock";
+import { IMAGES, PRODUCT, STAGES, BENEFITS, STATS, FLOENZY_PHOTOS } from "../mock/mock";
 
 const Home = () => {
   return (
@@ -66,7 +66,7 @@ const Home = () => {
         <div className="container-lux grid md:grid-cols-12 gap-12 md:gap-16 items-center">
           <Reveal className="md:col-span-6">
             <div className="img-zoom aspect-[4/5] bg-[var(--sand)]">
-              <img src={IMAGES.bathrooms[0]} alt="Luxury bathroom" />
+              <img src={FLOENZY_PHOTOS.marble} alt="Floenzy shower head in a marble bathroom" />
             </div>
           </Reveal>
           <div className="md:col-span-5 md:col-start-8">
@@ -202,6 +202,26 @@ const Home = () => {
         </section>
       ))}
 
+      {/* ---------------- FULL-BLEED LIFESTYLE BANNER ---------------- */}
+      <section
+        className="relative h-[70vh] md:h-[88vh] bg-cover bg-center bg-fixed flex items-end"
+        style={{ backgroundImage: `url(${FLOENZY_PHOTOS.using})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+        <div className="container-lux relative z-10 pb-16 md:pb-24">
+          <Reveal>
+            <p className="kicker" style={{ color: "#e8dfce" }}>
+              from the very first shower
+            </p>
+            <h2 className="display text-white text-5xl md:text-8xl mt-4 max-w-[900px]">
+              Softer skin. <em>Shinier</em> hair.
+              <br />
+              A moment that feels like <em>more.</em>
+            </h2>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ---------------- QUOTE ---------------- */}
       <section className="py-28 md:py-44">
         <div className="container-lux max-w-[900px] mx-auto text-center">
@@ -223,7 +243,7 @@ const Home = () => {
         <div className="container-lux">
           <div className="grid md:grid-cols-3 gap-6">
             <Reveal className="img-zoom aspect-[3/4] bg-[var(--sand)]">
-              <img src={PRODUCT.images[1]} alt="Floenzy installed" />
+              <img src={FLOENZY_PHOTOS.install} alt="Installing Floenzy" />
             </Reveal>
             <Reveal delay={120} className="img-zoom aspect-[3/4] bg-[var(--sand)] md:mt-16">
               <img src={IMAGES.beauty.hair[1]} alt="Healthy hair" />

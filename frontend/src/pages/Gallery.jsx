@@ -2,16 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Reveal from "../components/Reveal";
-import { IMAGES, PRODUCT } from "../mock/mock";
+import { IMAGES, PRODUCT, FLOENZY_PHOTOS } from "../mock/mock";
 
 const gallery = [
-  { src: PRODUCT.images[1], ratio: "aspect-[3/4]", label: "Floenzy · Beige" },
-  { src: IMAGES.bathrooms[1], ratio: "aspect-[3/4]", label: "The ritual" },
+  { src: FLOENZY_PHOTOS.marble, ratio: "aspect-[3/4]", label: "Floenzy · Graphite" },
+  { src: FLOENZY_PHOTOS.using, ratio: "aspect-[4/3]", label: "The morning ritual" },
   { src: IMAGES.beauty.skin[0], ratio: "aspect-[3/4]", label: "Softer skin" },
-  { src: IMAGES.water[3], ratio: "aspect-[3/4]", label: "Filtered flow" },
+  { src: FLOENZY_PHOTOS.install, ratio: "aspect-[4/3]", label: "Tool-free install" },
+  { src: IMAGES.bathrooms[1], ratio: "aspect-[3/4]", label: "The ritual" },
   { src: PRODUCT.images[2], ratio: "aspect-[3/4]", label: "Installed" },
   { src: IMAGES.beauty.hair[0], ratio: "aspect-[3/4]", label: "Healthier hair" },
-  { src: IMAGES.bathrooms[2], ratio: "aspect-[3/4]", label: "Everyday luxury" },
   { src: IMAGES.water[2], ratio: "aspect-[3/4]", label: "Spa pressure" },
   { src: IMAGES.beauty.droplets[1], ratio: "aspect-[3/4]", label: "On the skin" },
 ];

@@ -2,6 +2,16 @@
 // NOTE: This is MOCK data used for the frontend-only build. It will be
 // replaced with real API data during backend integration.
 
+// Real Floenzy brand photography (user-provided assets).
+export const FLOENZY_PHOTOS = {
+  marble:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/mgybwcdo_sdfsdfsd.jpeg",
+  using:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/j7ocr648_FLOENZY%20PHOTO%2016.webp",
+  install:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/kb2obog7_FLOENZY%20PHOTO%2001.webp",
+};
+
 export const IMAGES = {
   bathrooms: [
     "https://images.unsplash.com/photo-1661107259637-4e1c55462428?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBtaW5pbWFsaXN0JTIwYmF0aHJvb218ZW58MHx8fHwxNzg3NzIyNjE5fDA&ixlib=rb-4.1.0&q=85",
@@ -54,10 +64,16 @@ export const PRODUCT = {
   reviewCount: 12,
   images: [
     "https://m.media-amazon.com/images/I/41+eUCNwpTL._AC_SY879_.jpg",
+    FLOENZY_PHOTOS.marble,
     "https://m.media-amazon.com/images/I/61RIQ5VzabL._SY500_.jpg",
     "https://m.media-amazon.com/images/I/61f6rlTZV6L._SY500_.jpg",
-    "https://m.media-amazon.com/images/I/61iTAd7CCjL._SY500_.jpg",
+    FLOENZY_PHOTOS.install,
     "https://m.media-amazon.com/images/I/71y+D2zJxAL._SY500_.jpg",
+  ],
+  assurances: [
+    "Complimentary UK delivery",
+    "30-day returns",
+    "2-year guarantee",
   ],
   colours: [
     { name: "Beige", hex: "#D8CBB6" },

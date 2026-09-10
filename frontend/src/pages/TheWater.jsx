@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Reveal from "../components/Reveal";
-import { IMAGES, STATS } from "../mock/mock";
+import { IMAGES, STATS, FLOENZY_PHOTOS } from "../mock/mock";
 
 const points = [
   {
@@ -47,7 +47,7 @@ const TheWater = () => {
       <section className="pb-24">
         <div className="container-lux">
           <Reveal className="img-zoom aspect-[16/8] bg-[var(--sand)]">
-            <img src={IMAGES.water[0]} alt="Flowing water" />
+            <img src={FLOENZY_PHOTOS.using} alt="Woman showering with Floenzy" />
           </Reveal>
         </div>
       </section>

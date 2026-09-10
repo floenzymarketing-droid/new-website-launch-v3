@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Droplets, Wind, Layers } from "lucide-react";
 import Reveal from "../components/Reveal";
-import { STAGES, PRODUCT } from "../mock/mock";
+import { STAGES, PRODUCT, FLOENZY_PHOTOS } from "../mock/mock";
 
 const icons = [Wind, Droplets, Layers];
 
@@ -77,12 +77,12 @@ const Filtration = () => {
 
       <section className="py-28">
         <div className="container-lux grid md:grid-cols-12 gap-12 items-center">
-          <Reveal className="md:col-span-5">
-            <div className="img-zoom aspect-[4/5] bg-[var(--sand)]">
-              <img src={PRODUCT.images[3]} alt="Floenzy shower head" />
+          <Reveal className="md:col-span-6">
+            <div className="img-zoom aspect-[5/4] bg-[var(--sand)]">
+              <img src={FLOENZY_PHOTOS.install} alt="Floenzy universal ½″ fitting" />
             </div>
           </Reveal>
-          <div className="md:col-span-6 md:col-start-7">
+          <div className="md:col-span-5 md:col-start-8">
             <Reveal>
               <p className="kicker">no compromise</p>
               <h2 className="display text-5xl md:text-7xl mt-5">
