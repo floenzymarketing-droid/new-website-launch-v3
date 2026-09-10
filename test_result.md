@@ -101,3 +101,108 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Floenzy e-commerce backend with product catalog, reviews, water hardness lookup, orders with stock management, and subscription system"
+
+backend:
+  - task: "GET /api/catalog endpoint"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ All catalog tests passed (13/13). Returns product (SH001, £55, colours Beige/Grey-red), refill (FILTER-REFILL, £19), 3 subscription plans (2/3/4 months with 20/15/10% discounts), and stock dictionary with correct keys (SH001::Beige, SH001::Grey-red, FILTER-REFILL::)."
+
+  - task: "GET /api/reviews endpoint"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ All review GET tests passed (9/9). Returns list of reviews with all required fields (id, name, rating, title, body, location, created_at). Seeded with 3 reviews as expected."
+
+  - task: "POST /api/reviews endpoint"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ All review POST tests passed (6/6). Successfully creates reviews with auto-generated ID, increments review count, and validates rating field (rejects values outside 1-5 range with 422 status)."
+
+  - task: "GET /api/water-hardness/{postcode} endpoint"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ All water hardness tests passed (20/20). Tested multiple postcodes: SW1A (Very Hard, ~300ppm), M1 (Soft, ~40ppm), G1 (Soft, ~20ppm), TF3 (Hard, ~200ppm), ZZ99 (default Moderately Hard, 180ppm). All return correct postcode, area, ppm, level, and recommendation fields."
+
+  - task: "POST /api/orders endpoint"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ All order tests passed (17/17). Creates orders with correct calculations (subtotal, total, currency £, status confirmed). CRITICAL: Stock decrement verified - ordered 2x SH001::Beige, stock decreased from 250 to 248. GET /api/orders/{id} returns order (200), invalid ID returns 404. Subscription orders work correctly (3-month plan applies 15% discount, price 16.15). Validation working: insufficient stock returns 409, unknown SKU returns 400."
+
+  - task: "POST /api/subscriptions endpoint"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ All subscription tests passed (6/6). Creates subscriptions with correct SKU (FILTER-REFILL), discount calculation (2-month plan: 20% discount, price £15.20), next_ship date in future. Validation working: invalid interval (5 months) returns 400."
+
+frontend:
+  - task: "Frontend UI"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/App.js"
+    stuck_count: 0
+    priority: "low"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Frontend testing not performed as per system instructions (DO NOT TEST FRONTEND)."
+
+metadata:
+  created_by: "testing_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: false
+
+test_plan:
+  current_focus:
+    - "All Floenzy backend endpoints tested and verified"
+  stuck_tasks: []
+  test_all: true
+  test_priority: "high_first"
+
+agent_communication:
+  - agent: "testing"
+    message: "Comprehensive backend testing completed. All 71 tests passed (100% success rate). All Floenzy endpoints are working correctly: catalog, reviews (GET/POST with validation), water hardness lookup, orders (with stock management and subscription support), and subscriptions. Stock decrement verified working. All validation and error handling working as expected (422 for invalid input, 409 for insufficient stock, 400 for unknown SKU/invalid plans, 404 for missing orders)."

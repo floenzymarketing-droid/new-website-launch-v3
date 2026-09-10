@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Reveal from "../components/Reveal";
 import { IMAGES, STATS, FLOENZY_PHOTOS } from "../mock/mock";
+import WaterChecker from "../components/WaterChecker";
 
 const points = [
   {
@@ -80,6 +81,26 @@ const TheWater = () => {
               <p className="body-copy text-sm mt-3">{s.label}</p>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      <section className="py-28 md:py-36 border-y border-[var(--line)]">
+        <div className="container-lux text-center">
+          <Reveal>
+            <p className="kicker">check your postcode</p>
+            <h2 className="display text-5xl md:text-7xl mt-6">
+              How <em>hard</em> is your water?
+            </h2>
+            <p className="lede text-xl md:text-2xl mt-6 max-w-[560px] mx-auto text-[#4a463e]">
+              Enter your UK postcode to see your local hardness level — and whether
+              Floenzy is right for you.
+            </p>
+          </Reveal>
+          <Reveal delay={150}>
+            <div className="mt-14">
+              <WaterChecker />
+            </div>
+          </Reveal>
         </div>
       </section>
 

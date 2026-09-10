@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingBag } from "lucide-react";
 import { NAV } from "../mock/mock";
+import { useCart } from "../context/CartContext";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { count, openCart } = useCart();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -49,22 +51,40 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-8">
             <Link
               to="/shop"
-              className="font-sans-ui uppercase text-[0.7rem] tracking-[0.24em] border-b border-[var(--ink)] pb-1 hover:opacity-60 transition-opacity"
+              className="font-sans-ui uppercase text-[0.7rem] tracking-[0.24em] hover:opacity-60 transition-opacity"
             >
-              £55 · Shop
+              £55
             </Link>
+            <button
+              onClick={openCart}
+              className="relative flex items-center"
+              aria-label="Open bag"
+            >
+              <ShoppingBag size={20} strokeWidth={1.5} />
+              {count > 0 && (
+                <span className="absolute -top-2 -right-2 bg-[var(--ink)] text-[var(--cream)] text-[0.6rem] font-sans-ui w-4 h-4 rounded-full flex items-center justify-center">
+                  {count}
+                </span>
+              )}
+            </button>
           </div>
 
-          <button
-            className="md:hidden"
-            onClick={() => setOpen((o) => !o)}
-            aria-label="Menu"
-          >
-            {open ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex items-center gap-5 md:hidden">
+            <button onClick={openCart} className="relative" aria-label="Open bag">
+              <ShoppingBag size={22} strokeWidth={1.5} />
+              {count > 0 && (
+                <span className="absolute -top-2 -right-2 bg-[var(--ink)] text-[var(--cream)] text-[0.6rem] font-sans-ui w-4 h-4 rounded-full flex items-center justify-center">
+                  {count}
+                </span>
+              )}
+            </button>
+            <button onClick={() => setOpen((o) => !o)} aria-label="Menu">
+              {open ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </header>
 
