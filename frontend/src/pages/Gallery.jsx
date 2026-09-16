@@ -2,18 +2,33 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Reveal from "../components/Reveal";
-import { IMAGES, PRODUCT, FLOENZY_PHOTOS } from "../mock/mock";
+import { PRODUCT, FLOENZY_PHOTOS } from "../mock/mock";
+
+const G = {
+  install:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/e1t57j27_FLOENZY%20PHOTO%2001%20Large%20Large.jpeg",
+  faceBlack:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/an56fqb0_FLOENZY%20PHOTO%2017%20Large%20Large.jpeg",
+  showerBeige:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/t1hac89x_FLOENZY%20PHOTO%2016%20%281%29.webp",
+  washHair:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/pwxvulkw_FLOENZY%20PHOTO%2011%20Large%20Large.jpeg",
+  onRail:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/2us2rrc6_FLOENZY%20PHOTO%2021%20Large%20Large.jpeg",
+  softSkin:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/x8z5hl3k_FLOENZY%20PHOTO%2018%20%281%29%20Large%20Large.jpeg",
+};
 
 const gallery = [
-  { src: FLOENZY_PHOTOS.marble, ratio: "aspect-[3/4]", label: "Floenzy · Graphite" },
-  { src: FLOENZY_PHOTOS.using, ratio: "aspect-[4/3]", label: "The morning ritual" },
-  { src: IMAGES.beauty.skin[0], ratio: "aspect-[3/4]", label: "Softer skin" },
-  { src: FLOENZY_PHOTOS.install, ratio: "aspect-[4/3]", label: "Tool-free install" },
-  { src: IMAGES.bathrooms[1], ratio: "aspect-[3/4]", label: "The ritual" },
-  { src: PRODUCT.images[2], ratio: "aspect-[3/4]", label: "Installed" },
-  { src: IMAGES.beauty.hair[0], ratio: "aspect-[3/4]", label: "Healthier hair" },
-  { src: IMAGES.water[2], ratio: "aspect-[3/4]", label: "Spa pressure" },
-  { src: IMAGES.beauty.droplets[1], ratio: "aspect-[3/4]", label: "On the skin" },
+  { src: G.onRail, ratio: "aspect-[3/4]", label: "Floenzy · Graphite" },
+  { src: G.showerBeige, ratio: "aspect-[4/3]", label: "The morning ritual" },
+  { src: G.faceBlack, ratio: "aspect-[4/3]", label: "Softer skin" },
+  { src: G.install, ratio: "aspect-[4/3]", label: "Tool-free install" },
+  { src: G.washHair, ratio: "aspect-[4/3]", label: "Healthier hair" },
+  { src: FLOENZY_PHOTOS.marble, ratio: "aspect-[3/4]", label: "On marble" },
+  { src: G.softSkin, ratio: "aspect-[4/3]", label: "Spa pressure" },
+  { src: FLOENZY_PHOTOS.hand, ratio: "aspect-[3/4]", label: "In hand" },
+  { src: PRODUCT.images[1], ratio: "aspect-[4/3]", label: "The kit" },
 ];
 
 const Gallery = () => {
