@@ -17,9 +17,9 @@ export const FLOENZY_PHOTOS = {
   install:
     "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/kb2obog7_FLOENZY%20PHOTO%2001.webp",
   hand:
-    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/yt342wge_61ni3DeNvYL._AC_SL1448_%20%281%29.jpg",
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/ow0mdmb6_61dg53K7jZL._AC_SL1448_%20%282%29.jpg",
   box:
-    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/doyq5ep6_61dg53K7jZL._AC_SL1448_.jpg",
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/yt342wge_61ni3DeNvYL._AC_SL1448_%20%281%29.jpg",
   stageCarbon:
     "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/xrn62fsl_22472cce-b408-488d-92f3-ed0d278dfed9.png",
   stageVitaminC:
