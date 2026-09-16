@@ -10,6 +10,7 @@ import Filtration from "./pages/Filtration";
 import TheWater from "./pages/TheWater";
 import Gallery from "./pages/Gallery";
 import Shop from "./pages/Shop";
+import OurStory from "./pages/OurStory";
 import Checkout from "./pages/Checkout";
 
 const ScrollToTop = () => {
@@ -32,6 +33,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/the-water" element={<TheWater />} />
             <Route path="/filtration" element={<Filtration />} />
+            <Route path="/our-story" element={<OurStory />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/checkout" element={<Checkout />} />

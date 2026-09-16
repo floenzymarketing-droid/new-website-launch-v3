@@ -110,6 +110,7 @@ export const PRODUCT = {
 export const NAV = [
   { label: "The Water", to: "/the-water" },
   { label: "Filtration", to: "/filtration" },
+  { label: "Our Story", to: "/our-story" },
   { label: "Gallery", to: "/gallery" },
   { label: "Shop", to: "/shop" },
 ];
