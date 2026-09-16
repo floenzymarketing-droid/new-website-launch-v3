@@ -36,7 +36,7 @@ const TheWater = () => {
             </h1>
           </Reveal>
           <Reveal delay={220}>
-            <p className="lede text-center max-w-[600px] mx-auto text-2xl mt-12 text-[#4a463e]">
+            <p className="lede text-center max-w-[600px] mx-auto text-2xl mt-12 text-[#5b616a]">
               If you live in London, the South East or the Midlands, the water
               you shower in carries minerals, chlorine and metals at levels
               that visibly affect hair and skin.
@@ -91,7 +91,7 @@ const TheWater = () => {
             <h2 className="display text-5xl md:text-7xl mt-6">
               How <em>hard</em> is your water?
             </h2>
-            <p className="lede text-xl md:text-2xl mt-6 max-w-[560px] mx-auto text-[#4a463e]">
+            <p className="lede text-xl md:text-2xl mt-6 max-w-[560px] mx-auto text-[#5b616a]">
               Enter your UK postcode to see your local hardness level — and whether
               Floenzy is right for you.
             </p>

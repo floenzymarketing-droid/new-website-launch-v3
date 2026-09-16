@@ -24,7 +24,7 @@ const Home = () => {
           </Reveal>
           <Reveal delay={240}>
             <div className="flex flex-col items-center gap-8 mt-14">
-              <p className="lede text-center max-w-[540px] text-2xl md:text-[1.7rem] text-[#4a463e]">
+              <p className="lede text-center max-w-[540px] text-2xl md:text-[1.7rem] text-[#5b616a]">
                 A three-stage vitamin&nbsp;C filtration ritual — engineered for
                 UK hard water, designed for softer skin and healthier hair.
               </p>

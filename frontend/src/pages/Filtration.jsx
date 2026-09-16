@@ -22,7 +22,7 @@ const Filtration = () => {
             </h1>
           </Reveal>
           <Reveal delay={220}>
-            <p className="lede text-center max-w-[560px] mx-auto text-2xl mt-12 text-[#4a463e]">
+            <p className="lede text-center max-w-[560px] mx-auto text-2xl mt-12 text-[#5b616a]">
               Floenzy filters what your water company can't — combining
               activated carbon fibre, vitamin C and a multi-layer media into a
               single, quiet act of care.

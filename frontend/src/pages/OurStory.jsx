@@ -23,7 +23,7 @@ const OurStory = () => {
           <Reveal delay={240}>
             <div className="flex items-start gap-6 mt-14 max-w-[620px]">
               <span className="w-px h-24 bg-[var(--ink)] shrink-0 mt-1" />
-              <p className="lede text-2xl md:text-[1.7rem] text-[#4a463e]">
+              <p className="lede text-2xl md:text-[1.7rem] text-[#5b616a]">
                 A quiet complaint, heard in home after home — and the
                 engineering answer we built in response.
               </p>
@@ -81,7 +81,7 @@ const OurStory = () => {
         <div className="container-lux grid md:grid-cols-12 gap-12 md:gap-16">
           <div className="md:col-span-6">
             <Reveal>
-              <p className="body-copy text-xl md:text-2xl leading-[1.7] font-serif-display text-[#3a362f]">
+              <p className="body-copy text-xl md:text-2xl leading-[1.7] font-serif-display text-[#5b616a]">
                 Hard, mineral-laden water, running through fittings never
                 designed to filter it. The usual remedy — a full water softening
                 system — was rarely the answer.

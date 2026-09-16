@@ -68,7 +68,7 @@ const Checkout = () => {
           <h1 className="display text-6xl md:text-8xl mt-4">
             Thank you, <em>{order.customer.name.split(" ")[0] || "friend"}.</em>
           </h1>
-          <p className="lede text-2xl mt-8 text-[#4a463e]">
+          <p className="lede text-2xl mt-8 text-[#5b616a]">
             Your Floenzy is on its way. A confirmation has been sent to{" "}
             {order.customer.email}.
           </p>

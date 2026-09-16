@@ -142,7 +142,7 @@ const Shop = () => {
           <div className="md:col-span-5 md:pt-6">
             <p className="kicker">{PRODUCT.tagline}</p>
             <h1 className="display text-6xl md:text-7xl mt-4">{PRODUCT.name}</h1>
-            <p className="font-serif-display text-2xl italic mt-2 text-[#4a463e]">
+            <p className="font-serif-display text-2xl italic mt-2 text-[#5b616a]">
               {PRODUCT.title}
             </p>
 
