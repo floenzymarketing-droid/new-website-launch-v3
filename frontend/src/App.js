@@ -10,6 +10,7 @@ import Filtration from "./pages/Filtration";
 import TheWater from "./pages/TheWater";
 import Gallery from "./pages/Gallery";
 import Shop from "./pages/Shop";
+import ProductDetail from "./pages/ProductDetail";
 import OurStory from "./pages/OurStory";
 import Checkout from "./pages/Checkout";
 
@@ -36,6 +37,7 @@ function App() {
             <Route path="/our-story" element={<OurStory />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/shop/hard-water-shower-filter-head-beige" element={<ProductDetail />} />
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
           <Footer />
