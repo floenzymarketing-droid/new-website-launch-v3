@@ -48,7 +48,7 @@ const TheWater = () => {
       <section className="pb-24">
         <div className="container-lux">
           <Reveal className="img-zoom aspect-[16/8] bg-[var(--sand)]">
-            <img src={FLOENZY_PHOTOS.using} alt="Woman showering with Floenzy" />
+            <img src={FLOENZY_PHOTOS.waterMap} alt="UK hard water map and limescale effects" />
           </Reveal>
         </div>
       </section>

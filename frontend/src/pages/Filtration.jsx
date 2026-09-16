@@ -78,8 +78,8 @@ const Filtration = () => {
       <section className="py-28">
         <div className="container-lux grid md:grid-cols-12 gap-12 items-center">
           <Reveal className="md:col-span-6">
-            <div className="img-zoom aspect-[5/4] bg-[var(--sand)]">
-              <img src={FLOENZY_PHOTOS.install} alt="Floenzy universal ½″ fitting" />
+            <div className="img-zoom aspect-[4/5] bg-[var(--sand)]">
+              <img src={FLOENZY_PHOTOS.hand} alt="Floenzy shower head in hand" />
             </div>
           </Reveal>
           <div className="md:col-span-5 md:col-start-8">

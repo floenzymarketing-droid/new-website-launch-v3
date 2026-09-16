@@ -20,6 +20,14 @@ export const FLOENZY_PHOTOS = {
     "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/yt342wge_61ni3DeNvYL._AC_SL1448_%20%281%29.jpg",
   box:
     "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/doyq5ep6_61dg53K7jZL._AC_SL1448_.jpg",
+  stageCarbon:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/xrn62fsl_22472cce-b408-488d-92f3-ed0d278dfed9.png",
+  stageVitaminC:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/xze313nn_7ca8d537-de72-4e43-bbf0-f1e3d5628bc3.png",
+  stageMineral:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/zdpbujwd_ChatGPT%20Image%20Sep%2016%2C%202026%2C%2009_38_40%20AM.png",
+  waterMap:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/h5lnzup0_04d73c13-1703-4fc0-9ca5-635d9089d136.png",
 };
 
 export const IMAGES = {
@@ -112,24 +120,21 @@ export const STAGES = [
     kicker: "stage one",
     title: "Activated Carbon Fibre",
     body: "A dense bed of activated carbon fibre captures chlorine, sediment and dissolved heavy metals — the invisible residue that leaves skin tight and hair brittle.",
-    image:
-      "https://images.pexels.com/photos/17210496/pexels-photo-17210496.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    image: FLOENZY_PHOTOS.stageCarbon,
   },
   {
     no: "02",
     kicker: "stage two",
     title: "Vitamin C Infusion",
     body: "The same method used in professional spas. Vitamin C neutralises up to 98% of chlorine on contact, leaving water noticeably softer from the very first shower.",
-    image:
-      "https://images.pexels.com/photos/33217812/pexels-photo-33217812.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    image: FLOENZY_PHOTOS.stageVitaminC,
   },
   {
     no: "03",
     kicker: "stage three",
     title: "Multi-Layer Mineral Balance",
     body: "A final multi-layer media polishes the water and calms hard-water minerals — so your conditioner, your moisturiser, and your skin all simply work better.",
-    image:
-      "https://images.unsplash.com/photo-1436968188282-5dc61aae3d81?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxmbG93aW5nJTIwd2F0ZXJ8ZW58MHx8fHwxNzg3NzIyNjE5fDA&ixlib=rb-4.1.0&q=85",
+    image: FLOENZY_PHOTOS.stageMineral,
   },
 ];
 
