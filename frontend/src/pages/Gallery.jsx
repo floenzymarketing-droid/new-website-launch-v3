@@ -4,6 +4,9 @@ import { ArrowRight } from "lucide-react";
 import Reveal from "../components/Reveal";
 import { PRODUCT, FLOENZY_PHOTOS } from "../mock/mock";
 
+const INSTALL_VIDEO =
+  "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/52ts3wfh_FLOENZY%20INSTALATION%20-%20ORIGINAL.mp4";
+
 const G = {
   install:
     "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/e1t57j27_FLOENZY%20PHOTO%2001%20Large%20Large.jpeg",
@@ -17,6 +20,8 @@ const G = {
     "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/2us2rrc6_FLOENZY%20PHOTO%2021%20Large%20Large.jpeg",
   softSkin:
     "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/x8z5hl3k_FLOENZY%20PHOTO%2018%20%281%29%20Large%20Large.jpeg",
+  closeup:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/2i3eitbi_fullbanner31.webp",
 };
 
 const gallery = [
@@ -26,9 +31,28 @@ const gallery = [
   { src: G.install, ratio: "aspect-[4/3]", label: "Tool-free install" },
   { src: G.washHair, ratio: "aspect-[4/3]", label: "Healthier hair" },
   { src: FLOENZY_PHOTOS.marble, ratio: "aspect-[3/4]", label: "On marble" },
+  { src: G.closeup, ratio: "aspect-[4/3]", label: "Engineered in hand" },
   { src: G.softSkin, ratio: "aspect-[4/3]", label: "Spa pressure" },
   { src: FLOENZY_PHOTOS.hand, ratio: "aspect-[3/4]", label: "In hand" },
   { src: PRODUCT.images[1], ratio: "aspect-[4/3]", label: "The kit" },
+];
+
+const INSTALL_STEPS = [
+  {
+    no: "01",
+    title: "Unscrew",
+    body: "Remove your existing shower head from the hose — by hand, no tools required.",
+  },
+  {
+    no: "02",
+    title: "Attach",
+    body: "Screw Floenzy onto the standard UK ½″ hose. A snug hand-tighten is all it takes.",
+  },
+  {
+    no: "03",
+    title: "Enjoy",
+    body: "Turn on the water. Filtered, softer water flows from the very first shower.",
+  },
 ];
 
 const Gallery = () => {
@@ -61,6 +85,44 @@ const Gallery = () => {
               </div>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      {/* ---------- HOW TO INSTALL ---------- */}
+      <section className="py-24 border-t border-[var(--line)]">
+        <div className="container-lux">
+          <Reveal>
+            <p className="kicker text-center">under two minutes, no tools</p>
+            <h2 className="display text-center text-5xl md:text-8xl mt-6 mb-14">
+              How to <em>install.</em>
+            </h2>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="aspect-video bg-[var(--ink)] border border-[var(--line)] overflow-hidden max-w-[1000px] mx-auto">
+              <video
+                src={INSTALL_VIDEO}
+                poster={G.install}
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </Reveal>
+
+          <div className="grid md:grid-cols-3 gap-10 md:gap-14 mt-16 max-w-[1000px] mx-auto">
+            {INSTALL_STEPS.map((s, i) => (
+              <Reveal key={s.no} delay={i * 120}>
+                <div className="border-t border-[var(--ink)] pt-6">
+                  <span className="font-serif-display italic text-4xl text-[var(--accent)]">
+                    {s.no}
+                  </span>
+                  <h3 className="font-serif-display text-3xl mt-3">{s.title}</h3>
+                  <p className="body-copy mt-3">{s.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
