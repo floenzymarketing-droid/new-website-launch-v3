@@ -22,18 +22,26 @@ const G = {
     "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/x8z5hl3k_FLOENZY%20PHOTO%2018%20%281%29%20Large%20Large.jpeg",
   closeup:
     "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/2i3eitbi_fullbanner31.webp",
+  galleryPortrait:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/cip3rdvx_Gray%20Minimalist%20Photo%20COllage%20Portrait%20Instagram%20Post.png",
+  faceBeige:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/9shpsz3e_IMG_20260427_161047.webp",
+  attachBlack:
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/96677qhj_FLOENZY%20PHOTO%2010.webp",
 };
 
 const gallery = [
   { src: G.onRail, ratio: "aspect-[3/4]", label: "Floenzy · Graphite" },
+  { src: G.galleryPortrait, ratio: "aspect-[3/4]", label: "In the gallery" },
   { src: G.showerBeige, ratio: "aspect-[4/3]", label: "The morning ritual" },
   { src: G.faceBlack, ratio: "aspect-[4/3]", label: "Softer skin" },
-  { src: G.install, ratio: "aspect-[4/3]", label: "Tool-free install" },
+  { src: G.attachBlack, ratio: "aspect-[4/3]", label: "Fit the cartridge" },
   { src: G.washHair, ratio: "aspect-[4/3]", label: "Healthier hair" },
   { src: FLOENZY_PHOTOS.marble, ratio: "aspect-[3/4]", label: "On marble" },
-  { src: G.closeup, ratio: "aspect-[4/3]", label: "Engineered in hand" },
+  { src: G.install, ratio: "aspect-[4/3]", label: "Tool-free install" },
+  { src: G.faceBeige, ratio: "aspect-[3/4]", label: "Soft to the touch" },
   { src: G.softSkin, ratio: "aspect-[4/3]", label: "Spa pressure" },
-  { src: FLOENZY_PHOTOS.hand, ratio: "aspect-[3/4]", label: "In hand" },
+  { src: G.closeup, ratio: "aspect-[4/3]", label: "Engineered in hand" },
   { src: PRODUCT.images[1], ratio: "aspect-[4/3]", label: "The kit" },
 ];
 
