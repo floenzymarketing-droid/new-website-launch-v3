@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Reveal from "../components/Reveal";
 import { IMAGES, PRODUCT, STAGES, BENEFITS, STATS, FLOENZY_PHOTOS } from "../mock/mock";
+import { listProducts } from "../data/products";
 
 const Home = () => {
   return (
@@ -219,6 +220,46 @@ const Home = () => {
               A moment that feels like <em>more.</em>
             </h2>
           </Reveal>
+        </div>
+      </section>
+
+      {/* ---------------- SHOP THE COLLECTION ---------------- */}
+      <section className="py-24 md:py-32 border-t border-[var(--line)]">
+        <div className="container-lux">
+          <Reveal>
+            <p className="kicker text-center">shop the collection</p>
+          </Reveal>
+          <Reveal delay={100}>
+            <h2 className="display text-center text-6xl md:text-8xl mt-6 mb-16">
+              Four pieces, <em>one ritual.</em>
+            </h2>
+          </Reveal>
+          <div className="grid sm:grid-cols-2 gap-x-10 gap-y-16">
+            {listProducts().map((p, i) => (
+              <Reveal key={p.slug} delay={(i % 2) * 120}>
+                <Link to={`/shop/${p.slug}`} className="group block">
+                  <div className="img-zoom aspect-[4/5] bg-[var(--paper)] border border-[var(--line)] flex items-center justify-center">
+                    <img src={p.cardImage} alt={p.name} className="w-full h-full object-contain p-6" />
+                  </div>
+                  <div className="mt-5 flex items-start justify-between gap-4">
+                    <div>
+                      <p className="kicker">{p.brand}</p>
+                      <h3 className="font-serif-display text-2xl md:text-[1.7rem] leading-tight mt-1">
+                        {p.name}
+                      </h3>
+                      <p className="body-copy text-sm mt-1">{p.short}</p>
+                    </div>
+                    <span className="font-serif-display text-2xl whitespace-nowrap">
+                      £{p.price.toFixed(2)}
+                    </span>
+                  </div>
+                  <span className="btn-line mt-4">
+                    View product <ArrowRight size={14} />
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

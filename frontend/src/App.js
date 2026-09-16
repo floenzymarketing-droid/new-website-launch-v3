@@ -37,7 +37,8 @@ function App() {
             <Route path="/our-story" element={<OurStory />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/shop" element={<Shop />} />
-            <Route path="/shop/hard-water-shower-filter-head-beige" element={<ProductDetail />} />
+            <Route path="/shop/hard-water-shower-filter-head-beige" element={<ProductDetail slugOverride="hard-water-filter-beige" />} />
+            <Route path="/shop/:slug" element={<ProductDetail />} />
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
           <Footer />
