@@ -19,6 +19,9 @@ export const IMG = {
   beauty: A + "9shpsz3e_IMG_20260427_161047.webp",
   carbonCart: A + "xrn62fsl_22472cce-b408-488d-92f3-ed0d278dfed9.png",
   vitcCart: A + "xze313nn_7ca8d537-de72-4e43-bbf0-f1e3d5628bc3.png",
+  adFiltration: A + "ldkw3rcq_ChatGPT%20Image%20Sep%2017%2C%202026%2C%2011_56_50%20AM.png",
+  adBenefits: A + "61qi8ul6_ChatGPT%20Image%20Sep%2017%2C%202026%2C%2011_57_16%20AM.png",
+  adSpecs: A + "g21woqom_ChatGPT%20Image%20Sep%2017%2C%202026%2C%2011_57_21%20AM.png",
 };
 
 const HEAD_FEATURES = [
@@ -80,7 +83,7 @@ export const PRODUCTS = [
     rating: 4.3,
     reviewCount: 12,
     cardImage: IMG.beigeStudio,
-    images: [IMG.beigeStudio, IMG.beigeRail, IMG.beigeMain, IMG.attach, IMG.marble],
+    images: [IMG.beigeStudio, IMG.beigeRail, IMG.beigeMain, IMG.attach, IMG.marble, IMG.adFiltration, IMG.adBenefits, IMG.adSpecs],
     features: HEAD_FEATURES,
     aplus: HEAD_APLUS,
     faqs: HEAD_FAQS,
@@ -100,7 +103,7 @@ export const PRODUCTS = [
     rating: 4.3,
     reviewCount: 12,
     cardImage: IMG.grayStudio,
-    images: [IMG.grayStudio, IMG.marble, IMG.washHair, IMG.faceBlack, IMG.attach],
+    images: [IMG.grayStudio, IMG.marble, IMG.washHair, IMG.faceBlack, IMG.attach, IMG.adFiltration, IMG.adBenefits, IMG.adSpecs],
     features: HEAD_FEATURES,
     aplus: HEAD_APLUS,
     faqs: HEAD_FAQS,
