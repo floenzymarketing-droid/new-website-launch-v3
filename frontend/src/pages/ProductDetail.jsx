@@ -77,8 +77,8 @@ const ProductDetail = ({ slugOverride }) => {
         <div className="container-lux grid md:grid-cols-12 gap-10 md:gap-16">
           {/* gallery */}
           <div className="md:col-span-7">
-            <div className="aspect-[4/5] bg-[var(--paper)] border border-[var(--line)] overflow-hidden">
-              <img src={product.images[active]} alt={product.name} className="w-full h-full object-contain" />
+            <div className="aspect-square bg-[var(--paper)] border border-[var(--line)] overflow-hidden">
+              <img src={product.images[active]} alt={product.name} className="w-full h-full object-contain p-6" />
             </div>
             {product.images.length > 1 && (
               <div className="grid grid-cols-5 gap-3 mt-4">
@@ -98,10 +98,10 @@ const ProductDetail = ({ slugOverride }) => {
           {/* info */}
           <div className="md:col-span-5 md:pt-2">
             <p className="kicker">{product.brand}</p>
-            <h1 className="font-serif-display text-3xl md:text-[2.35rem] leading-[1.15] mt-3">
+            <h1 className="font-serif-display text-2xl md:text-3xl leading-[1.2] mt-3">
               {product.name}
             </h1>
-            <p className="body-copy text-sm mt-3 leading-relaxed">{product.tagline}</p>
+            <p className="body-copy text-xs mt-3 leading-relaxed">{product.tagline}</p>
 
             {isHead && (
               <div className="flex items-center gap-3 mt-5">

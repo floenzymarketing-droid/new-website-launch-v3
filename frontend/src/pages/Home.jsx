@@ -230,31 +230,30 @@ const Home = () => {
             <p className="kicker text-center">shop the collection</p>
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="display text-center text-6xl md:text-8xl mt-6 mb-16">
+            <h2 className="display text-center text-5xl md:text-6xl mt-6 mb-14">
               Four pieces, <em>one ritual.</em>
             </h2>
           </Reveal>
-          <div className="grid sm:grid-cols-2 gap-x-10 gap-y-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
             {listProducts().map((p, i) => (
-              <Reveal key={p.slug} delay={(i % 2) * 120}>
+              <Reveal key={p.slug} delay={(i % 4) * 90}>
                 <Link to={`/shop/${p.slug}`} className="group block">
-                  <div className="img-zoom aspect-[4/5] bg-[var(--paper)] border border-[var(--line)] flex items-center justify-center">
-                    <img src={p.cardImage} alt={p.name} className="w-full h-full object-contain p-6" />
+                  <div className="img-zoom aspect-square bg-[var(--paper)] border border-[var(--line)] flex items-center justify-center">
+                    <img src={p.cardImage} alt={p.name} className="w-full h-full object-contain p-8" />
                   </div>
-                  <div className="mt-5 flex items-start justify-between gap-4">
+                  <div className="mt-4 flex items-start justify-between gap-3">
                     <div>
                       <p className="kicker">{p.brand}</p>
-                      <h3 className="font-serif-display text-2xl md:text-[1.7rem] leading-tight mt-1">
+                      <h3 className="font-serif-display text-lg md:text-xl leading-tight mt-1">
                         {p.name}
                       </h3>
-                      <p className="body-copy text-sm mt-1">{p.short}</p>
                     </div>
-                    <span className="font-serif-display text-2xl whitespace-nowrap">
+                    <span className="font-serif-display text-lg whitespace-nowrap">
                       £{p.price.toFixed(2)}
                     </span>
                   </div>
-                  <span className="btn-line mt-4">
-                    View product <ArrowRight size={14} />
+                  <span className="btn-line mt-3 text-[0.62rem]">
+                    View product <ArrowRight size={13} />
                   </span>
                 </Link>
               </Reveal>
