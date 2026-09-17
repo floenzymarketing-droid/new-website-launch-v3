@@ -108,19 +108,6 @@ const ProductDetail = ({ slugOverride }) => {
                 <ZoomIn size={13} /> Click to zoom
               </span>
             </button>
-            {product.images.length > 1 && (
-              <div className="grid grid-cols-5 gap-3 mt-4">
-                {product.images.map((img, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActive(i)}
-                    className={`aspect-square bg-[var(--paper)] border overflow-hidden transition-colors ${active === i ? "border-[var(--ink)]" : "border-[var(--line)]"}`}
-                  >
-                    <img src={img} alt="" className="w-full h-full object-contain" />
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
 
           {/* info */}
