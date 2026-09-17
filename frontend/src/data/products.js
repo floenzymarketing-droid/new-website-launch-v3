@@ -24,6 +24,11 @@ export const IMG = {
   adFiltration: A + "ldkw3rcq_ChatGPT%20Image%20Sep%2017%2C%202026%2C%2011_56_50%20AM.png",
   adBenefits: A + "61qi8ul6_ChatGPT%20Image%20Sep%2017%2C%202026%2C%2011_57_16%20AM.png",
   adSpecs: A + "g21woqom_ChatGPT%20Image%20Sep%2017%2C%202026%2C%2011_57_21%20AM.png",
+  gHighPressure: A + "wrkhs4uq_7161OKiDFbL._AC_SL1500_.jpg",
+  gUKhomes: A + "n95qo655_71oOrgzoKrL._AC_SL1500_.jpg",
+  gAdvanced: A + "guw5fbk1_ChatGPT%20Image%20Sep%2017%2C%202026%2C%2011_56_50%20AM.png",
+  gBenefits: A + "kb9dybjd_ChatGPT%20Image%20Sep%2017%2C%202026%2C%2011_57_16%20AM.png",
+  gService: A + "3zyas207_ChatGPT%20Image%20Sep%2017%2C%202026%2C%2011_57_21%20AM.png",
 };
 
 const HEAD_FEATURES = [
@@ -105,7 +110,8 @@ export const PRODUCTS = [
     rating: 4.3,
     reviewCount: 12,
     cardImage: IMG.grayClean,
-    images: [IMG.grayClean, IMG.grayStudio, IMG.marble, IMG.washHair, IMG.faceBlack, IMG.attach, IMG.adFiltration, IMG.adBenefits, IMG.adSpecs],
+    images: [IMG.grayClean, IMG.grayStudio, IMG.marble, IMG.washHair, IMG.faceBlack, IMG.attach],
+    marketingImages: [IMG.gHighPressure, IMG.gAdvanced, IMG.gBenefits, IMG.gService, IMG.gUKhomes],
     features: HEAD_FEATURES,
     aplus: HEAD_APLUS,
     faqs: HEAD_FAQS,

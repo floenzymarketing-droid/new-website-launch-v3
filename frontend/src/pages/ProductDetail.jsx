@@ -185,8 +185,25 @@ const ProductDetail = ({ slugOverride }) => {
         </div>
       </section>
 
+      {/* ---------- marketing / A+ image stack ---------- */}
+      {product.marketingImages && (
+        <section className="border-t border-[var(--line)]">
+          <div className="container-lux py-14 md:py-20 max-w-[1000px] mx-auto space-y-8">
+            {product.marketingImages.map((img, i) => (
+              <Reveal key={i} delay={(i % 2) * 100}>
+                <img
+                  src={img}
+                  alt={`${product.name} feature ${i + 1}`}
+                  className="w-full border border-[var(--line)]"
+                />
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* ---------- A+ content (heads) ---------- */}
-      {isHead && product.aplus && (
+      {isHead && product.aplus && !product.marketingImages && (
         <section className="border-t border-[var(--line)]">
           {product.aplus.map((s, i) => (
             <div key={i} className="py-14 md:py-24">
