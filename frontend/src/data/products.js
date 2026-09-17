@@ -5,6 +5,8 @@ const A =
   "https://customer-assets-lxgj4vgw.emergentagent.net/job_shower-refresh/artifacts/";
 
 export const IMG = {
+  beigeClean: A + "i9ogdn4j_41%2BeUCNwpTL._AC_SY879_-removebg-preview.png",
+  grayClean: A + "dpsaj15d_51efh1TBJYL._AC_SY879_-removebg-preview.png",
   beigeStudio: A + "i4camxnb_61c%2BFmq6exL._AC_SL1500_.jpg",
   beigeMain: A + "i5yqy36a_41%2BeUCNwpTL._AC_SL1000_.jpg",
   beigeRail: A + "2us2rrc6_FLOENZY%20PHOTO%2021%20Large%20Large.jpeg",
@@ -82,8 +84,8 @@ export const PRODUCTS = [
     colour: "Beige",
     rating: 4.3,
     reviewCount: 12,
-    cardImage: IMG.beigeStudio,
-    images: [IMG.beigeStudio, IMG.beigeRail, IMG.beigeMain, IMG.attach, IMG.marble, IMG.adFiltration, IMG.adBenefits, IMG.adSpecs],
+    cardImage: IMG.beigeClean,
+    images: [IMG.beigeClean, IMG.beigeStudio, IMG.beigeRail, IMG.beigeMain, IMG.attach, IMG.marble, IMG.adFiltration, IMG.adBenefits, IMG.adSpecs],
     features: HEAD_FEATURES,
     aplus: HEAD_APLUS,
     faqs: HEAD_FAQS,
@@ -102,8 +104,8 @@ export const PRODUCTS = [
     colour: "Grey-red",
     rating: 4.3,
     reviewCount: 12,
-    cardImage: IMG.grayStudio,
-    images: [IMG.grayStudio, IMG.marble, IMG.washHair, IMG.faceBlack, IMG.attach, IMG.adFiltration, IMG.adBenefits, IMG.adSpecs],
+    cardImage: IMG.grayClean,
+    images: [IMG.grayClean, IMG.grayStudio, IMG.marble, IMG.washHair, IMG.faceBlack, IMG.attach, IMG.adFiltration, IMG.adBenefits, IMG.adSpecs],
     features: HEAD_FEATURES,
     aplus: HEAD_APLUS,
     faqs: HEAD_FAQS,

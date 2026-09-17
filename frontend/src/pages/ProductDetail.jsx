@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { Star, Plus, Minus, Check, ChevronRight, ShoppingBag, Truck } from "lucide-react";
+import { Star, Plus, Minus, Check, ChevronRight, ShoppingBag, Truck, ZoomIn, X } from "lucide-react";
 import Reveal from "../components/Reveal";
 import { useCart } from "../context/CartContext";
 import { getProduct } from "../data/products";
@@ -24,6 +24,7 @@ const ProductDetail = ({ slugOverride }) => {
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
+  const [zoom, setZoom] = useState(false);
 
   useEffect(() => {
     setActive(0);
@@ -63,6 +64,27 @@ const ProductDetail = ({ slugOverride }) => {
 
   return (
     <main className="bg-[var(--cream)]">
+      {/* zoom lightbox */}
+      {zoom && (
+        <div
+          onClick={() => setZoom(false)}
+          className="fixed inset-0 z-[80] bg-black/80 flex items-center justify-center p-6 cursor-zoom-out"
+        >
+          <button
+            onClick={() => setZoom(false)}
+            className="absolute top-6 right-6 text-white/80 hover:text-white"
+            aria-label="Close"
+          >
+            <X size={30} />
+          </button>
+          <img
+            src={product.images[active]}
+            alt={product.name}
+            className="max-w-[92vw] max-h-[88vh] object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
       {/* breadcrumb */}
       <div className="container-lux pt-28 pb-6">
         <div className="flex items-center gap-2 kicker">
@@ -77,9 +99,15 @@ const ProductDetail = ({ slugOverride }) => {
         <div className="container-lux grid md:grid-cols-12 gap-10 md:gap-16">
           {/* gallery */}
           <div className="md:col-span-7">
-            <div className="aspect-square bg-[var(--paper)] border border-[var(--line)] overflow-hidden">
+            <button
+              onClick={() => setZoom(true)}
+              className="group relative w-full aspect-square bg-[var(--paper)] border border-[var(--line)] overflow-hidden cursor-zoom-in"
+            >
               <img src={product.images[active]} alt={product.name} className="w-full h-full object-contain p-6" />
-            </div>
+              <span className="absolute bottom-3 right-3 flex items-center gap-1.5 bg-[var(--cream)]/90 border border-[var(--line)] px-3 py-1.5 kicker">
+                <ZoomIn size={13} /> Click to zoom
+              </span>
+            </button>
             {product.images.length > 1 && (
               <div className="grid grid-cols-5 gap-3 mt-4">
                 {product.images.map((img, i) => (
