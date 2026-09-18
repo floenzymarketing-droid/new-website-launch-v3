@@ -133,7 +133,7 @@ const ProductDetail = ({ slugOverride }) => {
             {/* colour link for heads */}
             {isHead && (
               <div className="mt-8">
-                <p className="kicker">colour — {product.colour === "Beige" ? "Beige" : "Gray"}</p>
+                <p className="kicker">colour — {product.colour === "Beige" ? "Beige" : "Grey"}</p>
                 <div className="flex gap-3 mt-4">
                   <Link
                     to="/shop/hard-water-filter-beige"
@@ -142,8 +142,8 @@ const ProductDetail = ({ slugOverride }) => {
                     style={{ background: "#D8CBB6", borderColor: "#D8CBB6" }}
                   />
                   <Link
-                    to="/shop/hard-water-filter-gray"
-                    aria-label="Gray"
+                    to="/shop/hard-water-filter-grey"
+                    aria-label="Grey"
                     className={`w-10 h-10 rounded-full border transition-transform ${product.colour !== "Beige" ? "ring-1 ring-offset-2 ring-[var(--ink)] scale-105" : "border-[var(--line)]"}`}
                     style={{ background: "#4b4f55", borderColor: "#4b4f55" }}
                   />
@@ -203,7 +203,7 @@ const ProductDetail = ({ slugOverride }) => {
       )}
 
       {/* ---------- A+ content (heads) ---------- */}
-      {isHead && product.aplus && !product.marketingImages && (
+      {isHead && product.aplus && (
         <section className="border-t border-[var(--line)]">
           {product.aplus.map((s, i) => (
             <div key={i} className="py-14 md:py-24">

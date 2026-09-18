@@ -29,7 +29,14 @@ export const IMG = {
   gAdvanced: A + "guw5fbk1_ChatGPT%20Image%20Sep%2017%2C%202026%2C%2011_56_50%20AM.png",
   gBenefits: A + "kb9dybjd_ChatGPT%20Image%20Sep%2017%2C%202026%2C%2011_57_16%20AM.png",
   gService: A + "3zyas207_ChatGPT%20Image%20Sep%2017%2C%202026%2C%2011_57_21%20AM.png",
+  sc1: A + "3fbhhmnw_81eOMiq6gxL._AC_SL1500_%20%281%29.jpg",
+  sc2: A + "e4kawl9p_71Z7z29e93L._AC_SL1500_%20%281%29.jpg",
+  sc3: A + "8qpb2u9i_7161OKiDFbL._AC_SL1500_%20%281%29.jpg",
+  sc4: A + "vkdikl7e_71oOrgzoKrL._AC_SL1500_%20%281%29.jpg",
+  sc5: A + "q009boaa_71Lhl7yK6AL._AC_SL1500_.jpg",
 };
+
+const SHOWCASE = [IMG.sc1, IMG.sc2, IMG.sc3, IMG.sc4, IMG.sc5];
 
 const HEAD_FEATURES = [
   ["Stop hard water damaging your hair & skin", "Floenzy's 3-stage Vitamin C + Activated Carbon filter reduces chlorine, limescale and heavy metals that strip moisture, cause hair breakage and leave skin dry and itchy. Designed specifically for UK hard water areas."],
@@ -90,20 +97,21 @@ export const PRODUCTS = [
     rating: 4.3,
     reviewCount: 12,
     cardImage: IMG.beigeClean,
-    images: [IMG.beigeClean, IMG.beigeStudio, IMG.beigeRail, IMG.beigeMain, IMG.attach, IMG.marble, IMG.adFiltration, IMG.adBenefits, IMG.adSpecs],
+    images: [IMG.beigeClean, IMG.beigeStudio, IMG.beigeMain, IMG.attach, IMG.marble],
+    marketingImages: SHOWCASE,
     features: HEAD_FEATURES,
     aplus: HEAD_APLUS,
     faqs: HEAD_FAQS,
     specs: headSpecs("Beige"),
   },
   {
-    slug: "hard-water-filter-gray",
+    slug: "hard-water-filter-grey",
     type: "head",
     brand: "FLOENZY",
-    name: "Hard Water Shower Filter Head — Gray",
+    name: "Hard Water Shower Filter Head — Grey",
     tagline:
       "Reduces Chlorine, Limescale & Heavy Metals · 3-Stage Vitamin C Filtration · High Pressure · Fits UK ½″ Hose",
-    short: "The same 3-stage filter head in graphite gray.",
+    short: "The same 3-stage filter head in graphite grey.",
     price: 65.41,
     sku: "SH001",
     colour: "Grey-red",
@@ -111,7 +119,7 @@ export const PRODUCTS = [
     reviewCount: 12,
     cardImage: IMG.grayClean,
     images: [IMG.grayClean, IMG.grayStudio, IMG.marble, IMG.washHair, IMG.faceBlack, IMG.attach],
-    marketingImages: [IMG.gHighPressure, IMG.gAdvanced, IMG.gBenefits, IMG.gService, IMG.gUKhomes],
+    marketingImages: SHOWCASE,
     features: HEAD_FEATURES,
     aplus: HEAD_APLUS,
     faqs: HEAD_FAQS,
@@ -164,13 +172,16 @@ export const PRODUCTS = [
 // Home / listing display order (bottom-to-top from the brief: heads first, then cartridges)
 export const PRODUCT_ORDER = [
   "hard-water-filter-beige",
-  "hard-water-filter-gray",
+  "hard-water-filter-grey",
   "cartridge-vitamin-c",
   "cartridge-no-aroma",
 ];
 
 export const getProduct = (slug) => {
-  const aliases = { "hard-water-shower-filter-head-beige": "hard-water-filter-beige" };
+  const aliases = {
+    "hard-water-shower-filter-head-beige": "hard-water-filter-beige",
+    "hard-water-filter-gray": "hard-water-filter-grey",
+  };
   const s = aliases[slug] || slug;
   return PRODUCTS.find((p) => p.slug === s);
 };
