@@ -15,7 +15,7 @@ const Filtration = () => {
             <p className="kicker text-center">the floenzy process</p>
           </Reveal>
           <Reveal delay={120}>
-            <h1 className="display text-center text-7xl md:text-[11vw] mt-8 leading-[0.88]">
+            <h1 className="display text-center text-6xl md:text-[8vw] mt-8 leading-[0.88]">
               Three <em>stages.</em>
               <br />
               One <em>ritual.</em>

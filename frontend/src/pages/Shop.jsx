@@ -7,11 +7,11 @@ import { listProducts } from "../data/products";
 const ProductCard = ({ p, delay = 0 }) => (
   <Reveal delay={delay}>
     <Link to={`/shop/${p.slug}`} className="group block">
-      <div className="img-zoom aspect-square bg-[var(--paper)] border border-[var(--line)] flex items-center justify-center">
+      <div className="aspect-square bg-[var(--paper)] border border-[var(--line)] flex items-center justify-center overflow-hidden">
         <img
           src={p.cardImage}
           alt={p.name}
-          className="w-full h-full object-contain p-8"
+          className="max-w-full max-h-full object-contain p-8"
         />
       </div>
       <div className="mt-4 flex items-start justify-between gap-4">

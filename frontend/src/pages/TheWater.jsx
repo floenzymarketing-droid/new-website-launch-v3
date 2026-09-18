@@ -29,7 +29,7 @@ const TheWater = () => {
             <p className="kicker text-center">the problem beneath the surface</p>
           </Reveal>
           <Reveal delay={120}>
-            <h1 className="display text-center text-7xl md:text-[10vw] mt-8 leading-[0.9]">
+            <h1 className="display text-center text-6xl md:text-[7.5vw] mt-8 leading-[0.9]">
               Over <em>60%</em> of UK homes
               <br />
               have <em>hard</em> water.

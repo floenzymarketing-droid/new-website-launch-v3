@@ -72,7 +72,7 @@ const Gallery = () => {
             <p className="kicker">the floenzy world</p>
           </Reveal>
           <Reveal delay={120}>
-            <h1 className="display text-7xl md:text-[11vw] mt-8">
+            <h1 className="display text-6xl md:text-[7.5vw] mt-8">
               A <em>quieter</em> luxury.
             </h1>
           </Reveal>

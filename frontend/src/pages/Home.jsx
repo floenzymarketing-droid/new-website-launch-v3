@@ -17,7 +17,7 @@ const Home = () => {
             </p>
           </Reveal>
           <Reveal delay={120}>
-            <h1 className="display text-center mt-8 text-[19vw] md:text-[12.5vw] leading-[0.86]">
+            <h1 className="display text-center mt-8 text-[14vw] md:text-[9vw] leading-[0.86]">
               where <em>hard</em> water
               <br />
               becomes <em>soft.</em>
@@ -238,8 +238,8 @@ const Home = () => {
             {listProducts().map((p, i) => (
               <Reveal key={p.slug} delay={(i % 4) * 90}>
                 <Link to={`/shop/${p.slug}`} className="group block">
-                  <div className="img-zoom aspect-square bg-[var(--paper)] border border-[var(--line)] flex items-center justify-center">
-                    <img src={p.cardImage} alt={p.name} className="w-full h-full object-contain p-8" />
+                  <div className="aspect-square bg-[var(--paper)] border border-[var(--line)] flex items-center justify-center overflow-hidden">
+                    <img src={p.cardImage} alt={p.name} className="max-w-full max-h-full object-contain p-8" />
                   </div>
                   <div className="mt-4 flex items-start justify-between gap-3">
                     <div>

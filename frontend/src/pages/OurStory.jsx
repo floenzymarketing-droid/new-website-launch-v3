@@ -14,7 +14,7 @@ const OurStory = () => {
             <p className="kicker">our story</p>
           </Reveal>
           <Reveal delay={120}>
-            <h1 className="display text-[13vw] md:text-[8.5vw] leading-[0.9] mt-8 max-w-[1100px]">
+            <h1 className="display text-[9vw] md:text-[6vw] leading-[0.9] mt-8 max-w-[1100px]">
               Why we brought
               <br />
               Floenzy <em>to the UK.</em>
