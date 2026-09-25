@@ -1,6 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Instagram, Youtube, Facebook } from "lucide-react";
 import { NAV, AMAZON_URL } from "../mock/mock";
+
+export const SOCIALS = [
+  { label: "Instagram", href: "https://www.instagram.com/floenzyfilteredshower/", Icon: Instagram },
+  { label: "YouTube", href: "https://www.youtube.com/@Floenzy", Icon: Youtube },
+  { label: "Facebook", href: "https://www.facebook.com/floenzy/", Icon: Facebook },
+];
 
 const Footer = () => {
   return (
@@ -50,8 +57,18 @@ const Footer = () => {
               connect
             </p>
             <ul className="mt-6 space-y-3 body-copy" style={{ color: "#cfc6b6" }}>
-              <li>Instagram</li>
-              <li>Pinterest</li>
+              {SOCIALS.map((s) => (
+                <li key={s.label}>
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 hover:text-white transition-colors"
+                  >
+                    <s.Icon size={16} /> {s.label}
+                  </a>
+                </li>
+              ))}
               <li>hello@floenzy.com</li>
             </ul>
           </div>

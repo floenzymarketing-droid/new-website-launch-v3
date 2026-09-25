@@ -70,7 +70,7 @@ export const IMAGES = {
 };
 
 export const AMAZON_URL =
-  "https://www.amazon.co.uk/Floenzy-Premium-Filtered-Shower-Water/dp/B0GBXPGGBH/";
+  "https://www.amazon.co.uk/s?k=FLOENZY";
 
 export const PRODUCT = {
   name: "Floenzy",

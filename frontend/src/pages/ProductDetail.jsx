@@ -185,17 +185,19 @@ const ProductDetail = ({ slugOverride }) => {
         </div>
       </section>
 
-      {/* ---------- marketing / A+ image stack ---------- */}
+      {/* ---------- marketing / A+ image showcase (2x2 grid) ---------- */}
       {product.marketingImages && (
         <section className="border-t border-[var(--line)]">
-          <div className="container-lux py-14 md:py-20 max-w-[1000px] mx-auto space-y-8">
+          <div className="container-lux py-14 md:py-20 max-w-[880px] mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
             {product.marketingImages.map((img, i) => (
               <Reveal key={i} delay={(i % 2) * 100}>
-                <img
-                  src={img}
-                  alt={`${product.name} feature ${i + 1}`}
-                  className="w-full border border-[var(--line)]"
-                />
+                <div className="aspect-square bg-[var(--paper)] border border-[var(--line)] overflow-hidden">
+                  <img
+                    src={img}
+                    alt={`${product.name} feature ${i + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </Reveal>
             ))}
           </div>
